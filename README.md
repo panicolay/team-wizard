@@ -6,7 +6,7 @@ Assistant IA pour accompagner les réunions d'équipe.
 
 ## Objectif
 
-Automatiser la formalisation des réunions DK :
+Automatiser la formalisation des réunions :
 
 - Générer une synthèse à partir de notes brutes
 - Extraire les sujets abordés, décisions prises, actions à suivre
@@ -69,6 +69,7 @@ Interface web permettant de :
 
 ## Structure du projet
 
+```
 /
 ├─ app/                   # Code principal (Next.js)
 │  ├─ components/         # Composants React réutilisables
@@ -79,6 +80,7 @@ Interface web permettant de :
 │  └─ database/           # Gestion Supabase
 ├─ prompts/               # Prompts système pour GPT
 └─ notes/                 # Notes brutes
+```
 
 ---
 

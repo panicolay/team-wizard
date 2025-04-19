@@ -44,8 +44,8 @@ npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 
-# Notes (optionnel, à décommenter si vous ne voulez pas versionner les notes)
-# notes/
+# Notes brutes (non versionnées)
+notes/
 
 # Supabase
 .supabase/ 
