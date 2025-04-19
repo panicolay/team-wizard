@@ -12,17 +12,24 @@ Automatiser la formalisation des réunions DK :
 - Extraire les sujets abordés, décisions prises, actions à suivre
 - Stocker les informations dans une base de données
 - Permettre une consultation facile des CR passés
-- Faciliter la recherche d’informations par sujet
+- Faciliter la recherche d'informations par sujet
 
 ---
 
-## Stack
+## Stack Technique
 
-- GPT-4o (API OpenAI)
-- Supabase (PostgreSQL)
-- Python (script d’analyse + insertion en base)
-- React (interface de consultation – à venir)
-- Vercel (déploiement web – à venir)
+- **Frontend :**
+  - Next.js (framework React)
+  - TypeScript (pour plus de robustesse)
+  - TailwindCSS (styling)
+
+- **Backend :**
+  - Python (analyse IA et traitement des notes)
+  - Supabase (base de données PostgreSQL)
+  - GPT-4 (API OpenAI)
+
+- **Déploiement :**
+  - Vercel (hébergement)
 
 ---
 
@@ -32,7 +39,7 @@ Automatiser la formalisation des réunions DK :
 
 Sous forme libre (.txt ou .md)
 
-### 2. Lancer le script d’analyse
+### 2. Lancer l'analyse
 
 L'IA propose :
 
@@ -44,15 +51,15 @@ La proposition peut être modifiée avant validation.
 
 ### 3. Enregistrement dans Supabase
 
-Le script insère automatiquement :
+Le système insère automatiquement :
 
 - un meeting
 - ses topics
 - les actions liées
 
-### 4. Consultation (à venir)
+### 4. Consultation
 
-Une interface web permettra à l'équipe de :
+Interface web permettant de :
 
 - consulter les CR par date
 - chercher un sujet abordé
@@ -63,21 +70,26 @@ Une interface web permettra à l'équipe de :
 ## Structure du projet
 
 /
-├─ analyse_dk.py # Script principal d’analyse IA
-├─ supabase_config.py # Connexion à Supabase
-├─ prompts/ # Prompts système pour GPT
-├─ notes/ # Dossier des notes brutes
-└─ ui/ # (à venir) interface React
+├─ app/                   # Code principal (Next.js)
+│  ├─ components/         # Composants React réutilisables
+│  ├─ pages/              # Pages principales
+│  └─ utils/              # Fonctions utilitaires
+├─ python/                # Scripts Python
+│  ├─ analysis/           # Analyse des notes
+│  └─ database/           # Gestion Supabase
+├─ prompts/               # Prompts système pour GPT
+└─ notes/                 # Notes brutes
 
 ---
 
 ## Roadmap
 
 - [x] Structure des tables Supabase
-- [ ] Analyse IA et insertion automatique
-- [ ] Interface web de consultation
-- [ ] Recherche sémantique par sujet
-- [ ] Assistant conversationnel (option Discord)
+- [ ] Mise en place de Next.js + TypeScript
+- [ ] Intégration de l'analyse IA
+- [ ] Interface de consultation basique
+- [ ] Système de tags
+- [ ] Export PDF
 
 ---
 
